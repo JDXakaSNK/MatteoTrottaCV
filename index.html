@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Trotta - Professional Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 4px solid #93c5fd;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 33px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #93c5fd;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            border-radius: 3px;
+            background-color: #e5e7eb;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            background-color: #3b82f6;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-progress {
+            height: 8px;
+            border-radius: 4px;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #3b82f6;
+        }
+        
+        .floating-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Floating Navigation -->
+    <div class="floating-nav hidden md:block bg-white shadow-lg rounded-full p-2">
+        <ul class="space-y-3">
+            <li><a href="#about" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition"><i class="fas fa-user"></i></a></li>
+            <li><a href="#experience" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="#education" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition"><i class="fas fa-graduation-cap"></i></a></li>
+            <li><a href="#skills" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition"><i class="fas fa-code"></i></a></li>
+            <li><a href="#languages" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition"><i class="fas fa-language"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-12 md:py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">				
+                    <div class="w-48 h-48 md:w-56 md:h-56 rounded-full bg-white shadow-xl overflow-hidden border-4 border-white">
+                        <img src=https://i.imgur.com/Xb4x6Hh.jpeg alt="Profile" class="w-full h-full object-cover" style="transform: translateX(-1px)">					
+                    </div>
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2">Matteo Trotta</h1>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-4">ICT Consultant, Precision Agriculture & Renewable Energy</h2>
+                    <p class="text-lg mb-6 max-w-2xl mx-auto md:mx-0">Innovative professional with expertise in ICT consulting, precision agriculture, and renewable energy solutions. Passionate about sustainable technologies and digital transformation.</p>
+                   <!--  <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </a>
+                        <a href="#" class="border-2 border-white text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download full CV
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center section-title">Personal Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Contact Details</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+                            <span>Currently based in Busto Arsizio (Italy)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-500 mt-1 mr-3"></i>
+                            <span>+39 351 940 3038, +39 348 43 22028</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
+                            <span>matteo.trotta89@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Personal Statement</h3>
+                    <p class="mb-4">Enthusiastic, enterprising and dynamic professional with excellent adaptability, especially in multicultural environments developed through extensive travel experience.</p>
+                    <p>I constantly set goals to achieve and always look for opportunities that allow me to grow both personally and professionally. I'm sociable, open to contact with people but at the same time I like to challenge myself with new experiences.</p>
+					
+					<p class="mb-2">"Not just a cv. Is the beginning of a collaboration."</p>
+<p class="mb-2">"From digital to reality: ready to create value with you."</p>
+<p class="mb-2">"Opportunities wanted. Welcome collaborations."</p>
+<p class="mb-2">"Fueled by caffeine, wild code, and unchecked ambition. Buckle up."</p>
+<p class="mb-2">"Hi, I'm Matteo. I work between code, energy and future."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center section-title">Work Experience</h2>
+            
+            <div class="relative pl-16 timeline">
+                <!-- Current Job -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Renewable Energy Consultant</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Current</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Vigani Seller srl, Cuveglio (Italia)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>09/2023 – Present</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Renewable Energy</span>
+                        </div>
+                        <p class="mb-4">My field is mainly consultancy focused on promoting sustainable solutions and energy efficiency. Application of sales techniques and marketing strategies with strong focus on customer engagement and market analysis.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Specific training on renewable energy and green practices</li>
+                            <li>Skills in energy needs assessment</li>
+                            <li>Proposal of economically advantageous solutions</li>
+                            <li>Personalized consultancy for consumption optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Drone Pilot -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Drone Pilot & Consultant</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">8+ years</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Terrasharp / Greensharp, Milano (Italia)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>01/2017 – 03/2025</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Precision Agriculture</span>
+                        </div>
+                        <p class="mb-4">Drone pilot and operational manager of Terrasharp project, expert in SFM (Structure from Motion) for photogrammetry, 3D reconstruction and GIS software. Open to future collaborations and new flights.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marked-alt text-blue-600 mr-2"></i>
+                                    <span class="font-medium">16,000+ hectares mapped</span>
+                                </div>
+                            </div>
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-clock text-blue-600 mr-2"></i>
+                                    <span class="font-medium">300+ flight hours</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Development of crop monitoring system improving efficiency by 20%</li>
+                            <li>Active member of NOVIAGRI in Piedmont</li>
+                            <li>Competent in image recognition techniques and R&D</li>
+                            <li>Studied scientific articles in agricultural research</li>
+							<li>Flight campaign active in South Africa, Italy, Romania</li>
+                        </ul>
+						
+                    </div>
+                </div>
+                
+                <!-- IT Consultant -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">IT Consultant</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">7 years</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Greensharp SRL, Milano (Italia)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>05/2016 – 04/2023</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">IT Consulting</span>
+                            <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded ml-2">SAP</span>
+                        </div>
+                        <p class="mb-4">Experience in business process analysis in SAP ERP environments and integration via Boomi.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Web application development with focus on ERP world like SAP Gui and SAPUI5</li>
+                            <li>Workflow automation and ticketing management on ServiceNow platform</li>
+                            <li>Operational knowledge of Google Cloud Platform (GCP)</li>
+                            <li>Development and deployment of scalable cloud-based solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Product Development Manager -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Product Development Manager - Assistant AD</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">6+ years</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>ServiziMobili, Busto Arsizio (Italia)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>01/2010 – 12/2016</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">ICT</span>
+                        </div>
+                        <p class="mb-4">Active involvement in all main company areas: operational planning, product development, order and warehouse management, supply chain optimization and supplier relations.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Leadership in technical interventions and customer assistance</li>
+                            <li>Responsibility for training internal and external staff</li>
+                            <li>Experience in UNI EN ISO 9001 certified context</li>
+                            <li>Professional use of Linux and computer network infrastructure design</li>
+                            <li>Packaging design, company cost analysis and communication optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Internship at FNM -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Communication Department Internship</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">5 months</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Ferrovie Nord Milano FNM, Milano (Italia)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>10/2013 – 03/2014</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Corporate Communications</span>
+                        </div>
+                        <p class="mb-4">Management of internal and external group communication, with particular attention to coordination with suppliers, municipal entities and strategic partners.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Teamwork for planning and implementing major projects including Expo 2015</li>
+                            <li>Participation in European sector events like UITP (International Union of Public Transport)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- F1 Contract Worker -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Formula 1 Contract Worker</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">1 month</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Naso, Varese (Italia) - Singapore</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>09/2015 – 10/2015</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Events</span>
+                        </div>
+                        <p class="mb-4">Collaboration in logistic organization and circuit setup for Formula 1 Grand Prix.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Responsible for assembly of exhibition stands</li>
+                            <li>Installation of audio and lighting systems</li>
+                            <li>Management of inflatable structures</li>
+                            <li>Effective teamwork under pressure respecting tight deadlines</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Renewable Energy Consultant -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Renewable Energy Consultant - Sales Training</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">10 months</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Energia Italia, Verona (Italia)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>01/2015 – 10/2015</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Renewable Energy</span>
+                        </div>
+                        <p class="mb-4">Commercial and marketing training for Energy Italia, electrical engineering course and energy consultant.</p>
+                    </div>
+                </div>
+                
+                <!-- Sales Assistant -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Sales Assistant at Trade Events</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">8+ years</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Antonia's Mustard, Heeten (Olanda)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>06/2015 – Present</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Marketing & Sales</span>
+                        </div>
+                        <p class="mb-4">Collaboration supporting sales and promotion of artisan products from the Knobben family at international trade fairs.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Participation in L'Artigiano in Fiera (Rho)</li>
+                            <li>Participation in Cheese (Brà) and Gusti di Frontiera (Gorizia)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Security Systems Management -->
+                <div class="relative mb-12 timeline-item">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600">Security Systems Management</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">3 months</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center text-gray-600 mb-4">
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <i class="fas fa-building mr-2 text-blue-500"></i>
+                                <span>Alienvault LLC, Munich (Germany)</span>
+                            </div>
+                            <div class="md:ml-6 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                                <span>11/2010 – 01/2011</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Public Administration</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Intensive cybersecurity course</li>
+                            <li>Open Source study for security and event management</li>
+                            <li>Penetration testing</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button id="toggle-experience" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                    View Full Work History
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-12 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center section-title">Education & Training</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Degree -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Communication Science & Techniques</h3>
+                            <p class="text-gray-600">EQF Level 8</p>
+                        </div>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Laurea</span>
+                    </div>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i class="fas fa-university mr-2 text-blue-500"></i>
+                        <span>Universitas Studiorum Insubriae, Varese (Italia)</span>
+                    </div>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                        <span>09/2009 – 03/2014</span>
+                    </div>
+                    <p>Degree in Communication Science and Techniques with Graphic-Advertising specialization.</p>
+                </div>
+                
+                <!-- Master -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Master in Advertising</h3>
+                            <p class="text-gray-600">EQF Level 8</p>
+                        </div>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">375 hours</span>
+                    </div>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i class="fas fa-university mr-2 text-blue-500"></i>
+                        <span>Universitas Studiorum Insubriae, Varese (Italia)</span>
+                    </div>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                        <span>03/2011 – 09/2012</span>
+                    </div>
+                    <p>Specialization in Graphics, Advertising Campaigns, Social Networks, Video Editing and main editorial and editing programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center section-title">Skills & Competencies</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-sm skill-card transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-laptop-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Technical Skills</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span>SAP ERP & Boomi</span>
+                                <span class="text-blue-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </li>
+						<li>
+                            <div class="flex justify-between mb-1">
+                                <span>GIS Software</span>
+                                <span class="text-blue-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span>Drone Operations</span>
+                                <span class="text-blue-600">Expert</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                        </li>
+                                                <li>
+                            <div class="flex justify-between mb-1">
+                                <span>3D Reconstruction</span>
+                                <span class="text-blue-600">Expert</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Professional Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-sm skill-card transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Professional Skills</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span>Project Management</span>
+                                <span class="text-blue-600">Expert</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span>Team Leadership</span>
+                                <span class="text-blue-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span>Strategic Planning</span>
+                                <span class="text-blue-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span>Sales & Marketing</span>
+                                <span class="text-blue-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Digital Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-sm skill-card transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Digital Skills</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center">
+                            <i class="fab fa-microsoft text-blue-600 mr-2"></i>
+                            <span>Microsoft Office</span>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center">
+                            <i class="fas fa-cloud text-blue-600 mr-2"></i>
+                            <span>Google Cloud</span>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center">
+                            <i class="fas fa-database text-blue-600 mr-2"></i>
+                            <span>ServiceNow</span>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center">
+                            <i class="fas fa-camera text-blue-600 mr-2"></i>
+                            <span>Photogrammetry</span>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center">
+                            <i class="fas fa-video text-blue-600 mr-2"></i>
+                            <span>Video Editing</span>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center">
+                            <i class="fas fa-image text-blue-600 mr-2"></i>
+                            <span>Graphic Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <!-- Languages Section -->
+    <section id="languages" class="py-12 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center section-title">Languages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Italian -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold text-blue-600">IT</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Italian</h3>
+                            <p class="text-gray-600">Native Speaker</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Understanding</span>
+                                <span class="text-blue-600">C2</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Speaking</span>
+                                <span class="text-blue-600">C2</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Writing</span>
+                                <span class="text-blue-600">C2</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- English -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold text-blue-600">EN</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">English</h3>
+                            <p class="text-gray-600">First Certificate of English - Cambridge</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Understanding</span>
+                                <span class="text-blue-600">C2</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Speaking</span>
+                                <span class="text-blue-600">C2</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Writing</span>
+                                <span class="text-blue-600">C2</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spanish -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold text-blue-600">ES</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Spanish</h3>
+                            <p class="text-gray-600">Intermediate Level</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Understanding</span>
+                                <span class="text-blue-600">C1</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Speaking</span>
+                                <span class="text-blue-600">B1</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Writing</span>
+                                <span class="text-blue-600">B1</span>
+                            </div>
+                            <div class="language-progress bg-blue-100">
+                                <div class="h-full bg-blue-600 rounded" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center section-title">Personal Interests</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-plane text-blue-600 text-xl"></i>
+                    </div>
+                    <span class="font-medium">Travel</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-utensils text-blue-600 text-xl"></i>
+                    </div>
+                    <span class="font-medium">Cooking</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-camera text-blue-600 text-xl"></i>
+                    </div>
+                    <span class="font-medium">Photography</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-book text-blue-600 text-xl"></i>
+                    </div>
+                    <span class="font-medium">Reading</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-leaf text-blue-600 text-xl"></i>
+                    </div>
+                    <span class="font-medium">Gardening</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-water text-blue-600 text-xl"></i>
+                    </div>
+                    <span class="font-medium">Diving (SSNI)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-blue-200 mt-1 mr-4"></i>
+                                <span>matteo.trotta89@gmail.com</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-200 mt-1 mr-4"></i>
+                                <span>+39 351 940 3038</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-200 mt-1 mr-4"></i>
+                                <span>21052 Busto Arsizio (Italia)</span>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <div class="flex flex-col items-center">
+                        <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/matteo-trotta-7a0a2767/" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-400 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/JDXakaSNK" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-400 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <p>© 2023 Matteo Trotta. All rights reserved.</p>
+            <p class="mt-2 text-sm">Authorized the processing of personal data contained in my curriculum vitae pursuant to art. 13 of Legislative Decree 196/2003 and art. 13 of EU Regulation 2016/679 relating to the protection of individuals with regard to the processing of personal data.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle additional work experience
+        document.getElementById('toggle-experience').addEventListener('click', function() {
+            const additionalExp = document.getElementById('additional-experience');
+            const button = this;
+            
+            if (additionalExp.classList.contains('hidden')) {
+                additionalExp.classList.remove('hidden');
+                button.innerHTML = 'Hide Full Work History <i class="fas fa-chevron-up ml-2"></i>';
+            } else {
+                additionalExp.classList.add('hidden');
+                button.innerHTML = 'View Full Work History <i class="fas fa-chevron-right ml-2"></i>';
+            }
+            
+            // Animate the new items
+            document.querySelectorAll('#additional-experience .timeline-item').forEach((item, index) => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateX(20px)';
+                item.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateX(0)';
+                }, 100);
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple animation for timeline items when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.timeline-item').forEach((item, index) => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateX(20px)';
+            item.style.transition = `all 0.5s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+        
+        // Animation for skill cards
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.skill-card').forEach(card => {
+            skillObserver.observe(card);
+        });
+    </script>
+</body>
+</html>
